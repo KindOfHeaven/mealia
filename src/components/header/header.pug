@@ -1,1 +1,25 @@
-mixin header()
+mixin header(header)
+	header.header#header(class=header.className)
+		.container
+			a.header__logo(href="https://kindofheaven.ru/mealia")
+				img(src="./assets/images/content/logo.svg", alt="Logotype")
+			nav.navigation
+				ul.navigation__list
+					if header.active == 'Nutrition'
+						li.navigation__list--item._active
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/nutrition.html") Nutrition
+					else
+						li.navigation__list--item
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/nutrition.html") Nutrition
+					if header.active == 'Blog'
+						li.navigation__list--item._active
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/blog.html") Blog
+					else
+						li.navigation__list--item
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/blog.html") Blog
+					if header.active == 'Contact'
+						li.navigation__list--item._active
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/contact.html") Contact
+					else
+						li.navigation__list--item
+							a.navigation__list--link.nav-text(href="https://kindofheaven.ru/mealia/contact.html") Contact

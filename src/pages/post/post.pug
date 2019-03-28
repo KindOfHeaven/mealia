@@ -1,0 +1,59 @@
+extends ../layout.pug
+
+block content
+	include ../../components/header/header.pug
+	include ../../components/footer/footer.pug
+	include ../../components/section/section.pug
+	include ../../components/picture/picture.pug
+	include ../../components/model/model.pug
+	include ../../components/modal/modal.pug
+	include ../../components/preloader/preloader.pug
+	include ../../components/blog-preview/blog-preview.pug
+	+header({
+		'className': 'alwaysFixed',
+		'active': 'Blog'
+	})
+	+section({
+		'className': 'post-section'
+	})
+		.container
+			h2.subtitle Mar 21 New Flavor - Tropical Coconut
+			.post-block
+				.post-content
+					p.content Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki. Squid +1 vinyl woke ramps gluten-free tacos pickled master cleanse plaid flexitarian you probably haven't heard of them everyday carry PBR&B vexillologist. Banh mi sustainable pickled cornhole activated charcoal sartorial. Pinterest green juice meditation cray. Cronut normcore viral knausgaard microdosing narwhal bespoke tote bag. XOXO everyday carry shaman gentrify bushwick truffaut whatever actually.
+					p.content Echo park chicharrones bicycle rights migas kogi intelligentsia you probably haven't heard of them woke slow-carb. Squid farm-to-table austin cred, tbh truffaut microdosing asymmetrical actually VHS selfies chia pug waistcoat YOLO. Semiotics distillery fanny pack locavore fam cloud bread edison bulb. Cred schlitz beard cronut 3 wolf moon migas.
+					p.content Four loko pinterest sriracha pork belly. Humblebrag mustache PBR&B four dollar toast, cliche actually tumblr taxidermy echo park enamel pin subway tile. Heirloom church-key bicycle rights cardigan, lumbersexual waistcoat af kitsch ugh coloring book. Lo-fi poke small batch banh mi, heirloom poutine hoodie live-edge before they sold out fashion axe coloring book everyday carry banjo glossier.
+					p.content Twee williamsburg heirloom pickled vape whatever stumptown. Sustainable taxidermy hashtag swag readymade prism before they sold out, affogato occupy. Meditation tofu stumptown next level live-edge pork belly sriracha portland hammock flannel asymmetrical williamsburg. Bespoke before they sold out flannel tattooed umami quinoa try-hard forage pop-up etsy. Letterpress la croix selfies swag cliche jean shorts ennui chicharrones kickstarter. Thundercats chillwave chartreuse, hexagon forage helvetica taxidermy green juice DIY synth you probably haven't heard of them dreamcatcher tofu coloring book stumptown. 3 wolf moon selvage tilde brooklyn williamsburg fashion axe, chambray letterpress.
+					p.content Roof party 3 wolf moon woke waistcoat, pug fam man braid drinking vinegar farm-to-table tattooed echo park humblebrag everyday carry poutine YOLO. Kickstarter kale chips wayfarers taiyaki adaptogen YOLO hell of tilde forage franzen lo-fi gluten-free cred synth put a bird on it. Chillwave messenger bag cred pug af iceland synth chambray letterpress kinfolk palo santo helvetica paleo knausgaard. Cloud bread truffaut kitsch four loko lomo post-ironic whatever cornhole taxidermy hammock tofu.
+				.post-picture
+					+picture({
+						'href': './assets/images/content/post/post',
+						'type': 'jpg',
+						'alt': 'post image'
+					})
+			.related
+				+blog-preview({
+					'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+					'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+					'href': 'https://kindofheaven.ru/mealia/post.html'
+				})
+				+blog-preview({
+					'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+					'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+					'href': 'https://kindofheaven.ru/mealia/post.html'
+				})
+				+blog-preview({
+					'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+					'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+					'href': 'https://kindofheaven.ru/mealia/post.html'
+				})
+	+footer([
+		{
+			'text': 'Privacy Policy',
+			'href': 'javascript:void(0)'
+		},
+		{
+			'text': 'Terms of Use',
+			'href': 'javascript:void(0)'
+		}
+	], '_colored')

@@ -1,0 +1,61 @@
+extends ../layout.pug
+
+block content
+	include ../../components/header/header.pug
+	include ../../components/footer/footer.pug
+	include ../../components/section/section.pug
+	include ../../components/picture/picture.pug
+	include ../../components/model/model.pug
+	include ../../components/preloader/preloader.pug
+	+header({
+		'className': 'alwaysFixed',
+		'active': 'Nutrition'
+	})
+	+section({
+		'className': 'nutrition-section'
+	})
+		.container
+			.nutrition
+				+model({
+					'title': 'Superberry',
+					'image': {
+						'href': './assets/images/content/main/model7',
+						'type': 'png',
+						'alt': 'Superberry'
+					},
+					'background': '#b33150',
+					'text': 'Lorem ipsum dolor amet hella bicycle rights banh mi, raw denim glossier farm-to-table 3 wolf moon 8-bit aesthetic.'
+				})
+				.nutrition-picture
+					+picture({
+						'href': './assets/images/content/nutrition/asset1',
+						'type': 'png',
+						'alt': 'Superberry'
+					})
+			.nutrition
+				+model({
+					'title': 'Tropical Coconut Milk',
+					'image': {
+						'href': './assets/images/content/main/model1',
+						'type': 'png',
+						'alt': 'Tropical Coconut Milk'
+					},
+					'background': '#ffd741',
+					'text': 'Lorem ipsum dolor amet hella bicycle rights banh mi, raw denim glossier farm-to-table 3 wolf moon 8-bit aesthetic.'
+				})
+				.nutrition-picture
+					+picture({
+						'href': './assets/images/content/nutrition/asset2',
+						'type': 'png',
+						'alt': 'Tropical Coconut Milk'
+					})
+	+footer([
+		{
+			'text': 'Privacy Policy',
+			'href': 'javascript:void(0)'
+		},
+		{
+			'text': 'Terms of Use',
+			'href': 'javascript:void(0)'
+		}
+	], '_colored')

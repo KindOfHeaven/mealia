@@ -1,0 +1,9 @@
+mixin picture(picture)
+	picture
+		source(srcset=picture.href+'.webp' type="image/webp")
+		if picture.type == 'jpg'
+			source(srcset=picture.href+'.jpg' type="image/jpeg")
+			img(src=picture.href+'.jpg', alt=picture.alt)
+		else
+			source(srcset=picture.href+'.png' type="image/png")
+			img(src=picture.href+'.png', alt=picture.alt)

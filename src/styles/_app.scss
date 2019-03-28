@@ -1,0 +1,148 @@
+html {
+	&.modalOpened {
+		&, body {
+			overflow: hidden;
+			position: relative;
+			height: 100%;
+			max-height: 100vh;
+			width: 100%;
+		}
+	}
+}
+body {
+	padding-top: 100px;
+	@include respond-below(sm) {
+		padding-top: 60px;
+	}
+	min-height: 100vh;
+	padding-bottom: 100px;
+	position: relative;
+	.footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+.container {
+	max-width: map-get($breakpoints, lg);
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	padding: 0 15px;
+}
+.text {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.16;
+	color: $dark;
+	-webkit-transition: opacity .5s linear .3s;
+	   -moz-transition: opacity .5s linear .3s;
+	    -ms-transition: opacity .5s linear .3s;
+	     -o-transition: opacity .5s linear .3s;
+	        transition: opacity .5s linear .3s;
+	opacity: 0;
+	&._animated {
+		opacity: 1;
+	}
+}
+.small-text {
+	font-size: 16px;
+	line-height: 1.18;
+	color: $dark;
+	font-weight: 700;
+}
+.nav-text {
+	font-size: 16px;
+	line-height: 1.19;
+	color: $dark;
+	font-weight: 500;
+	@include respond-below(sm) {
+		font-size: 14px;
+	}
+}
+.subtitle {
+	font-size: 40px;
+	line-height: 1.175;
+	font-weight: 700;
+	color: $dark;
+	position: relative;
+	span {
+		color: $green;
+		font-weight: 400;
+	}
+	&:after {
+		content: "";
+		width: 207px;
+		height: 5px;
+		position: absolute;
+		bottom: -5px;
+		left: -100%;
+		display: block;
+		background: $green;
+		opacity: 0;
+		-webkit-transition: opacity .5s linear .3s, left .5s linear .4s;
+		   -moz-transition: opacity .5s linear .3s, left .5s linear .4s;
+		    -ms-transition: opacity .5s linear .3s, left .5s linear .4s;
+		     -o-transition: opacity .5s linear .3s, left .5s linear .4s;
+		        transition: opacity .5s linear .3s, left .5s linear .4s;
+	}
+	&._center {
+		text-align: center;
+	}
+	@include respond-below(sm) {
+		font-size: 32px;
+	}
+	-webkit-transition: opacity .5s linear .3s;
+	   -moz-transition: opacity .5s linear .3s;
+	    -ms-transition: opacity .5s linear .3s;
+	     -o-transition: opacity .5s linear .3s;
+	        transition: opacity .5s linear .3s;
+	position: relative;
+	opacity: 0;
+	&._animated {
+		opacity: 1;
+		&:after {
+			opacity: 1;
+			left: 0;
+		}
+		&._center {
+			&:after {
+				left: calc(50% - 103.5px);
+			}
+		}
+	}
+}
+.title {
+	font-size: 85px;
+	line-height: 1.17;
+	color: #fff;
+	font-weight: 700;
+	@include respond-below(md) {
+		font-size: 75px;
+	}
+	@include respond-below(sm) {
+		font-size: 48px;
+	}
+	-webkit-transition: opacity .5s linear .3s, right .3s linear .3s, top .3s linear .3s;
+	   -moz-transition: opacity .5s linear .3s, right .3s linear .3s, top .3s linear .3s;
+	    -ms-transition: opacity .5s linear .3s, right .3s linear .3s, top .3s linear .3s;
+	     -o-transition: opacity .5s linear .3s, right .3s linear .3s, top .3s linear .3s;
+	        transition: opacity .5s linear .3s, right .3s linear .3s, top .3s linear .3s;
+	top: -30px;
+	right: -30px;
+	position: relative;
+	opacity: 0;
+	&._animated {
+		top: 0;
+		right: 0;
+		opacity: 1;
+	}
+}
+.content {
+	font-size: 16px;
+	line-height: 1.19;
+	font-weight: 400;
+	color: $dark;
+}

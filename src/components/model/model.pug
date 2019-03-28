@@ -1,0 +1,11 @@
+mixin model(model)
+	include ../picture/picture.pug
+	.model
+		.subtitle._center #{model.title}
+		.model__image(style="background-color: "+model.background)
+			+picture({
+				'href': model.image.href,
+				'type': model.image.type,
+				'alt': model.image.alt
+			})
+		p.model__text.text !{model.text}

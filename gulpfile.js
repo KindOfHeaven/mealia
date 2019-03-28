@@ -50,7 +50,7 @@ const path = {
         },
         src: { 
             html: ['src/pages/**/*.pug', '!src/pages/layout.pug'], 
-            js: 'src/**/*.js',
+            js: ['node_modules/jquery/dist/jquery.min.js','src/**/*.js'],
             css: 'src/styles/style.scss',
             img: ['src/assets/images/**/*.*', '!src/assets/images/svg'],
             fonts: 'src/assets/fonts/**/*.*'
@@ -117,15 +117,15 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
     return gulp.src(path.src.js)
+        .pipe(concat('main.js'))
         .pipe(babel({
-            presets: ['env']
+            presets: ['@babel/preset-env']
         }).on( 'error', notify.onError(
             {
                 message: "<%= error.message %>",
                 title  : "JavaScript Error!"
             }))
         )
-        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
 });

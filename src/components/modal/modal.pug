@@ -1,0 +1,7 @@
+mixin modal(modal)
+	include ../icon/icon.pug
+	.modal__wrapper
+		.modal(class=modal.className id=modal.id)
+			block
+			.modal__closer
+				+icon('exit')

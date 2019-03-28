@@ -1,14 +1,18 @@
 // Colors
+$gray: #f8f8f8;
+$dark: #333333;
+$green: #94c93d;
+
 
 // Sizes
 
 // General
-$font: "Source Sans Pro";
+$font: "HelveticaNeueCyr";
 
 // Responsive
 $breakpoints: (
-	xl: 1300px,
 	lg: 1170px,
+	tb: 960px,
 	md: 768px,
 	sm: 480px
 );

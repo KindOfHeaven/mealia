@@ -1,0 +1,74 @@
+extends ../layout.pug
+
+block content
+	include ../../components/header/header.pug
+	include ../../components/footer/footer.pug
+	include ../../components/section/section.pug
+	include ../../components/picture/picture.pug
+	include ../../components/model/model.pug
+	include ../../components/modal/modal.pug
+	include ../../components/preloader/preloader.pug
+	include ../../components/blog-preview/blog-preview.pug
+	+header({
+		'className': 'alwaysFixed',
+		'active': 'Blog'
+	})
+	+section({
+		'className': 'blog-section'
+	})
+		.container
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+			+blog-preview({
+				'title': '<span>Mar 21</span> New Flavor - Tropical Coconut',
+				'text': 'Lorem ipsum dolor amet activated charcoal skateboard flexitarian, street art try-hard fixie shabby chic scenester hot chicken readymade vexillologist vegan. Deep v etsy kitsch literally thundercats taiyaki.',
+				'href': 'https://kindofheaven.ru/mealia/post.html'
+			})
+	+footer([
+		{
+			'text': 'Privacy Policy',
+			'href': 'javascript:void(0)'
+		},
+		{
+			'text': 'Terms of Use',
+			'href': 'javascript:void(0)'
+		}
+	], '_colored')

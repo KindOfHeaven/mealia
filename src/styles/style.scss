@@ -2,6 +2,7 @@
 
 @import 'variables';
 @import 'mixins';
+@import 'components';
 @import 'fonts';
 @import 'reset';
 @import 'app';
@@ -9,3 +10,8 @@
 // Pages
 
 @import '../pages/index/index';
+
+@import "../pages/nutrition/nutrition";
+@import "../pages/blog/blog";
+@import "../pages/post/post";
+@import "../pages/contact/contact";

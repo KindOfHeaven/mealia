@@ -1,1 +1,8 @@
-mixin footer()
+mixin footer(nav, className)
+	footer.footer(class=className)
+		.container
+			nav.footer__nav
+				ul.footer__list
+					each item in nav
+						li.footer__list--item
+							a.footer__list--link.nav-text(href=item.href) #{item.text}

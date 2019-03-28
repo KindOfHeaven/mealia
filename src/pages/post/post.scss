@@ -1,0 +1,86 @@
+.post-section {
+	padding: 50px 0 95px 0;
+	.post-block {
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+		@include respond-below(md) {
+			-webkit-flex-direction: column-reverse;
+			    -ms-flex-direction: column-reverse;
+			        flex-direction: column-reverse;
+		    -webkit-justify-content: flex-start;
+		            justify-content: flex-start;
+		    -webkit-align-items: center;
+		            align-items: center;
+		}
+		margin: 40px 0 30px 0;
+		.post-content {
+			flex: 1 1 100%;
+			.content + .content {
+				margin-top: 20px;
+			}
+		}
+		.post-picture {
+			width: 391px;
+			flex: 0 0 391px;
+			max-width: 391px;
+			margin-left: 40px;
+			@include respond-below(tb) {
+				flex: 0 0 300px;
+				width: 300px;
+				max-width: 300px;
+			}
+			@include respond-below(md) {
+				flex: 0 0 auto;
+				max-width: 391px;
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+.related {
+	width: 100%;
+	height: auto;
+	padding: 30px 25px;
+	background: #f8f8f8;
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+	@include respond-below(lg) {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	    -webkit-justify-content: flex-start;
+	            justify-content: flex-start;
+	    -webkit-align-items: flex-start;
+	            align-items: flex-start;
+	}
+	@include respond-below(sm) {
+		padding: 20px 15px;
+	}
+	.blog-preview {
+		flex: 0 0 calc((100% - 100px)/3);
+		max-width: calc((100% - 100px)/3);
+		width: calc((100% - 100px)/3);
+		@include respond-below(lg) {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

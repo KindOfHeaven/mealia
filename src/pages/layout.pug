@@ -1,3 +1,4 @@
+include ../components/preloader/preloader.pug
 doctype html
 html(lang="ru")
 	head
@@ -16,8 +17,10 @@ html(lang="ru")
 			script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
 		<![endif]-->
 		//- Title
-		title Template222
+		title Mealia
 		//- Styles
 		link(rel="stylesheet" href="./css/style.css")
 	body
 		block content
+		+preloader()
+		script(src="./js/main.js")

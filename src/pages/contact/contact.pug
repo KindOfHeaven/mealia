@@ -1,0 +1,32 @@
+extends ../layout.pug
+
+block content
+	include ../../components/header/header.pug
+	include ../../components/footer/footer.pug
+	include ../../components/section/section.pug
+	+header({
+		'className': 'alwaysFixed',
+		'active': 'Contact'
+	})
+	+section({
+		'className': 'contacts-section'
+	})
+		.container
+			h2.subtitle._center Contact Us
+			form.form
+				input.input#name(type="text" placeholder="Name" name="name")
+				input.input#email(type="email" placeholder="Email" name="email")
+				textarea#message.textarea(name="message", cols="30", rows="10")
+				button.button(type="button") Submit
+			h3.subtitle._center Our Address
+			p.text Lorem ipsum dolor amet hella bicycle rights banh mi, raw denim glossier farm-to-table 
+	+footer([
+		{
+			'text': 'Privacy Policy',
+			'href': 'javascript:void(0)'
+		},
+		{
+			'text': 'Terms of Use',
+			'href': 'javascript:void(0)'
+		}
+	], '_colored')
